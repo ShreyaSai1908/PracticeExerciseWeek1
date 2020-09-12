@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.Design;
+using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Tracing;
 using System.Drawing;
 using System.Security.Cryptography;
@@ -76,6 +78,17 @@ namespace PracticeExerciseWeek1
                     RunExerciseFourteen();
                     break;
 
+                case 15:
+                    RunExerciseFifteen();
+                    break;
+
+                case 16:
+                    RunExerciseSixteen();
+                    break;
+
+                case 17:
+                    RunExerciseSeventeen();
+                    break;
             }
 
 
@@ -84,13 +97,13 @@ namespace PracticeExerciseWeek1
 
         static void RunExerciseOne()
         {
-           
-           Console.Write("Please enter First Name:");
+
+            Console.Write("Please enter First Name:");
             String firstName = Console.ReadLine();
             Console.Write("Please enter Last Name:");
-           String lastName = Console.ReadLine();
+            String lastName = Console.ReadLine();
             Console.Write("Hello " + firstName + " " + lastName + "! I'm glad to inform you that you are the test subject of my first assignment ");
-            
+
         }
 
 
@@ -98,14 +111,14 @@ namespace PracticeExerciseWeek1
         {
 
             DateTime today = DateTime.Today;
-            Console.WriteLine("Today's date is "+ today);
+            Console.WriteLine("Today's date is " + today);
 
             DateTime tomorrow = DateTime.Today.AddDays(+1);
             Console.WriteLine("Tomorrow's date is " + tomorrow);
 
             DateTime yesterday = DateTime.Today.AddDays(-1);
             Console.WriteLine("Yesterday's date was " + yesterday);
-            
+
         }
 
         static void RunExerciseThree()
@@ -148,7 +161,7 @@ namespace PracticeExerciseWeek1
             */
 
             string str = "The quick fox jumped Over the DOG";
-            
+
             // The brown fox jumped over the lazy dog
             /*Console.WriteLine("Original String: " + str);
             result = str.Substring(4);
@@ -186,7 +199,7 @@ namespace PracticeExerciseWeek1
             int num = str.Length;
             //str = str.Insert(71, ",6,7,8,9,10");
             Console.WriteLine("Lenght: " + num);
-            str = str.Insert(num-1, ",6,7,8,9,10");
+            str = str.Insert(num - 1, ",6,7,8,9,10");
             Console.WriteLine("InsertString: " + str);
 
 
@@ -210,10 +223,10 @@ namespace PracticeExerciseWeek1
 
             if (num1 > num2)
             {
-               Console.WriteLine("This number is biggest" + num1);
+                Console.WriteLine("This number is biggest" + num1);
             }
 
-            else 
+            else
             {
                 Console.WriteLine("This number is smallest" + num2);
             }
@@ -226,7 +239,7 @@ namespace PracticeExerciseWeek1
             {
                 Console.WriteLine("Denominator is 0");
             }
-            else 
+            else
             {
                 Console.WriteLine(num1 / num2);
             }
@@ -239,10 +252,10 @@ namespace PracticeExerciseWeek1
             double radius = 0;
             double pi = 3.14;
             double volume = 0;
-            
+
             Console.Write("Enter Radius: ");
-            radius= Convert.ToDouble(Console.ReadLine());
-            
+            radius = Convert.ToDouble(Console.ReadLine());
+
             area = 2 * pi * radius * radius;
             volume = (4 * pi * radius * radius * radius) / 3;
             Console.WriteLine("Area= " + area);
@@ -255,19 +268,19 @@ namespace PracticeExerciseWeek1
             double result = 0;
 
             Console.Write("Please Enter a Number: ");
-            num= Convert.ToDouble(Console.ReadLine());
+            num = Convert.ToDouble(Console.ReadLine());
 
-            result= Math.Pow(num, 2);
-            Console.WriteLine("Square of "+ num + "=" +result);
-            
+            result = Math.Pow(num, 2);
+            Console.WriteLine("Square of " + num + "=" + result);
+
             result = Math.Pow(num, 10);
-            Console.WriteLine("Power of Ten of "+ num + "= " + result);
+            Console.WriteLine("Power of Ten of " + num + "= " + result);
 
-            result= Math.Pow(num, 0.5);
-            Console.Write("Square root of "+ num + "=" + result);
+            result = Math.Pow(num, 0.5);
+            Console.Write("Square root of " + num + "=" + result);
 
-            
-           
+
+
         }
         static void RunExerciseNine()
 
@@ -275,7 +288,7 @@ namespace PracticeExerciseWeek1
             String userName = "Shreya";
             int birthYear = 0;
             int age = 0;
-            
+
             Console.WriteLine("Please Enter Your Name:");
             Console.Write("Name: ");
             userName = Console.ReadLine();
@@ -290,7 +303,7 @@ namespace PracticeExerciseWeek1
                 String ifYes = "Your Order Has Been Done";
                 String ifNo = "You Can Order a Coke";
                 String usrChoice = "";
-                Console.Write("Want To Order a Beer? (y/n):" );
+                Console.Write("Want To Order a Beer? (y/n):");
                 usrChoice = Console.ReadLine();
                 if (usrChoice == "y")
                 {
@@ -306,7 +319,7 @@ namespace PracticeExerciseWeek1
             }
 
 
-            else 
+            else
             {
                 String ifYes = "The Coke Has Been Served";
                 String ifNo = "No Order Options Are Available";
@@ -318,19 +331,19 @@ namespace PracticeExerciseWeek1
                 {
                     Console.WriteLine(ifYes);
                 }
-                
+
                 else
                 {
                     Console.WriteLine(ifNo);
                 }
-               
 
-               
+
+
             }
 
 
 
-          
+
         }
 
         static void RunExerciseTen()
@@ -358,26 +371,26 @@ namespace PracticeExerciseWeek1
 
         static void RunFirstOption()
         {
-               
-                int a = 0;
-                int b = 0;
-                int result = 0;
-                Console.Write("Please Enter a Number: ");
-                a = Convert.ToInt32(Console.ReadLine());
-                Console.Write("Please Enter a Number: ");
-                b = Convert.ToInt32(Console.ReadLine());
-                
 
-                if (b != 0)
-                {
+            int a = 0;
+            int b = 0;
+            int result = 0;
+            Console.Write("Please Enter a Number: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Please Enter a Number: ");
+            b = Convert.ToInt32(Console.ReadLine());
+
+
+            if (b != 0)
+            {
                 result = a / b;
                 Console.WriteLine(result);
-                }
+            }
 
-                else
-                {
-                    Console.WriteLine("It Is An Error");
-                }
+            else
+            {
+                Console.WriteLine("It Is An Error");
+            }
 
         }
 
@@ -392,10 +405,10 @@ namespace PracticeExerciseWeek1
             int n = 10;
             Console.Write("Enter Number Comes After Zero: ");
             n = Convert.ToInt32(Console.ReadLine());
-            
+
             for (i = 1; i <= n; i++)
             {
-                
+
                 if (i % 2 == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -436,8 +449,8 @@ namespace PracticeExerciseWeek1
             {
                 for (j = 1; j <= 10; j++)
                 {
-                    Console.Write(i*j+"\t");
-                
+                    Console.Write(i * j + "\t");
+
                 }
                 Console.WriteLine();
             }
@@ -448,13 +461,13 @@ namespace PracticeExerciseWeek1
             int randomNumber = 0;
             int usrNumber = 0;
             int counter = 1;
-            
-            randomNumber=RandomNumberGenerator.GetInt32(501);
+
+            randomNumber = RandomNumberGenerator.GetInt32(501);
 
             Console.Write("Guess a number between 1 and 500:");
             usrNumber = Convert.ToInt32(Console.ReadLine());
 
-            while (usrNumber != randomNumber && usrNumber!=-1)
+            while (usrNumber != randomNumber && usrNumber != -1)
             {
                 if (usrNumber > randomNumber)
                 {
@@ -497,13 +510,97 @@ namespace PracticeExerciseWeek1
                 counter++;
             }
 
-            Console.WriteLine("Sum= "+sum);
-            average = sum / (counter-1);
+            Console.WriteLine("Sum= " + sum);
+            average = sum / (counter - 1);
             Console.WriteLine("Average= " + average);
-            
+
+        }
+
+        static void RunExerciseFifteen()
+        {
+            int i = 0;
+            int n = 0;
+            int sum = 0;
+            Console.Write("Please Enter a Number: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            for (i = n - 1; i >= 1; i--)
+            {
+                if (n % i == 0)
+                {
+                    Console.WriteLine(i);
+                    sum = sum + i;
+
+                }
+
+            }
+            if (sum == n)
+            {
+                Console.WriteLine("This Number Is a Perfect Number");
+            }
+            else
+            {
+                Console.WriteLine("This Number Is Not a Perfect Number");
+            }
+        }
+
+        static void RunExerciseSixteen()
+        {
+            int a = 0;
+            int b = 1;
+            int c = 0;
+
+            int n = 0;
+            int i = 0;
+
+            Console.Write("Please enter the lenght of the Fibonacci series:");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write(a + "\t");
+            Console.Write(b + "\t");
+            for (i = 3; i <= n; i++)
+            {
+                c = a + b;
+                Console.Write(c + "\t");
+                a = b;
+                b = c;
+            }
+        }
+
+        static void RunExerciseSeventeen()
+        {
+            String usrText = "";
+            String revText = "";
+            int strLen = 0;
+            int i = 0;
+
+            Console.WriteLine("Please enter a String:");
+            usrText = Console.ReadLine();
+
+            usrText = usrText.Replace(" ", "");
+
+            strLen = usrText.Length;
+
+            for (i = strLen - 1; i >= 0; i--)
+            {
+                revText = revText + usrText[i];
+            }
+
+
+            //Console.WriteLine(usrText);
+            //Console.WriteLine(revText);
+
+            if (revText.CompareTo(usrText) == 0)
+            {
+                Console.WriteLine("This String is a PALINDROME!");
+            }
+            else
+            {
+                Console.WriteLine("This String is not a PALINDROME!");
+            }
+
         }
 
 
-    }
+    } //Program class ends here
 
-}    
+}  //Namespace ends here  
