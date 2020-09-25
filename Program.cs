@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Tracing;
 using System.Drawing;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Transactions;
@@ -89,6 +91,20 @@ namespace PracticeExerciseWeek1
                 case 17:
                     RunExerciseSeventeen();
                     break;
+
+                case 18:
+                    RunExerciseEighteen();
+                    break;
+
+                case 19:
+                    RunExerciseNineteen();
+                        break;
+
+                case 20:
+                    RunExerciseTwenty();
+                    break;
+
+               
             }
 
 
@@ -484,7 +500,7 @@ namespace PracticeExerciseWeek1
             }
             if (usrNumber != -1)
             {
-                Console.WriteLine("It's a rigth guess. You made " + counter + " attempts");
+                Console.WriteLine("It's a right guess. You made " + counter + " attempts");
             }
             else
             {
@@ -523,6 +539,7 @@ namespace PracticeExerciseWeek1
             int sum = 0;
             Console.Write("Please Enter a Number: ");
             n = Convert.ToInt32(Console.ReadLine());
+
             for (i = n - 1; i >= 1; i--)
             {
                 if (n % i == 0)
@@ -599,7 +616,107 @@ namespace PracticeExerciseWeek1
             }
 
         }
+        static void RunExerciseEighteen()
+        {
+            int  num =10;         
+            int[] usrNumber = new int[10];
+            double[] arrNumber = new double[10];
 
+            for (int i = 0; i < num; i++)
+            {              
+               usrNumber[i] = RandomNumberGenerator.GetInt32(300);               
+            }
+            
+           
+            for (int i = 0; i < num; i++)
+            {
+                arrNumber[i] = 1 / usrNumber[i];
+                Console.WriteLine(arrNumber[i]);
+                
+            }
+            
+
+        }
+        static void RunExerciseNineteen()
+        {
+            int payment = 0;
+            int cashGiven = 0;
+            int change = 0;
+            int[] array1 = { 1000, 500, 200, 100,50, 20, 5, 1 };
+            int[] array2 = new int[8];
+            
+
+            Console.Write("Amount to Pay: ");
+            payment = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Cash Given: ");
+            cashGiven= Convert.ToInt32(Console.ReadLine());
+
+            change = cashGiven - payment;
+            Console.WriteLine("Toatal Change: " + change);
+
+            for (int i = 0; i < 8; i++)
+            {
+                
+                array2[i] = change / array1[i];
+                change = change - (array1[i] * array2[i]);
+                Console.WriteLine(array1[i] +"\t" + array2[i]);
+            }
+            
+
+        }
+
+        static void RunExerciseTwenty()
+        {
+            int [] arr1 = new int [5];
+            int [] arr2 = new int [5];
+            int i = 0;
+            int front = 0;
+            int rear = 4;
+
+            //assign arr1 random values
+            for (i = 0; i < 5; i++)
+            {
+                arr1[i]= RandomNumberGenerator.GetInt32(300);
+            }
+
+            for (i = 0; i < 5; i++)
+            {
+                if (arr1[i] % 2 != 0)
+                {
+                    if (front < 5)
+                    { 
+                      arr2[front] = arr1[i];
+                      front++;
+                    }
+                }
+                else
+                {
+                    if (rear >= 0)
+                    { 
+                      arr2[rear] = arr1[i];
+                      rear--;
+                    }
+                }
+            }
+            
+            for (i = 0; i < 5; i++)
+            {
+                Console.WriteLine(arr1[i]);               
+
+            }
+
+            Console.WriteLine("---------------------------------");
+
+            for (i = 0; i < 5; i++)
+            {
+                Console.WriteLine(arr2[i]);
+
+            }
+
+        }
+
+        
 
     } //Program class ends here
 
